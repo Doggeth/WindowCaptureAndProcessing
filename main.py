@@ -14,8 +14,8 @@ if __name__ == '__main__':
     sandstorm_toast.text_fields = ['SANDSTORM ALERT!']
     sandstorm_toast.on_activated = lambda _: print("SANDSTORM ALERT!")
     travelling_merchant_toast = Toast()
-    travelling_merchant_toast.text_fields = ['TRAVELLING MERCHANT']
-    travelling_merchant_toast.on_activated = lambda _: print("TRAVELLING MERCHANT!")
+    travelling_merchant_toast.text_fields = ['TRAVELING MERCHANT']
+    travelling_merchant_toast.on_activated = lambda _: print("TRAVELING MERCHANT!")
 
     title_pattern = re.compile("Terraria:*")
     current_windows = cw.get_window_names()
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
             chat_data = ocr.predict(chat_img)
             for line in chat_data[0]['rec_texts']:
-                if "travelling" in line.lower():
+                if "traveling" in line.lower():
                     toaster.show_toast(travelling_merchant_toast)
 
             time.sleep(3)
